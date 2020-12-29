@@ -1,9 +1,15 @@
+import React from "react";
+import { HashRouter as Router, Route } from "react-router-dom";
+import Home from "../routes/Home";
+import Detail from "../routes/Detail";
 
 function App() {
   return (
-    <div className="App">
-      <h1> Hello </h1>
-    </div>
+    <Router>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/:id" component={Detail} />
+
+    </Router>
   );
 }
 

@@ -10,6 +10,7 @@ const GET_MOVIES = gql`
         id
         title
         medium_cover_image
+        isLiked @client
     }
 }
 `;
@@ -72,6 +73,7 @@ export default () => {
           <Movie
             key={m.id}
             id={m.id}
+            isLiked={m.isLiked}
             bg={m.medium_cover_image}
           />
         ))}
